@@ -23,7 +23,9 @@ const authOptions: NextAuthOptions = {
   callbacks: {
     async session({ session, token }) {
       // 임시: role 하드코딩(추후 DB 연동)
-      session.user.role = token.role || "USER";
+      if (session.user) {
+        (session.user as any).role = token.role || "USER";
+      }
       return session;
     },
     async jwt({ token }) {
