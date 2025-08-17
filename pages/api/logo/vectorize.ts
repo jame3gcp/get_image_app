@@ -45,7 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (err) {
       return res.status(500).json({ error: "파일 파싱 실패" });
     }
-    const file = files.file;
+    const file = files.file as any;
     if (!file) {
       return res.status(400).json({ error: "파일이 첨부되지 않았습니다." });
     }
