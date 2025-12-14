@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "formidable": "^3.5.4",
-    "next": "15.4.6",
+    "next": "15.4.10",
     "next-auth": "^4.24.11",
     "node-fetch": "^3.3.2",
     "potrace": "^2.1.8",
